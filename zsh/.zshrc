@@ -9,7 +9,15 @@ if [[ -e /usr/share/zsh/manjaro-zsh-prompt ]]; then
   source /usr/share/zsh/manjaro-zsh-prompt
 fi
 
-#Source my stuff
+# Source my stuff
+
+# Import colorscheme from 'wal' asynchronously
+(cat ~/.cache/wal/sequences &)
+# Alternative
+cat ~/.cache/wal/sequences
+# TTY support
+source ~/.cache/wal/colors-tty.sh
+
 source .CustomFunctions.sh
 source .scripts/.xsetwacom.sh
 fortune

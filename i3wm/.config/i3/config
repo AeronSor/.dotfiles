@@ -123,14 +123,12 @@ mode "resize" {
 
 bindsym $mod+r mode "resize"
 
-# Color palette
-#I3 bar BGS
-set_from_resource $bg-color		           color0      #ffffff
-set_from_resource $inactive-bg-color     color6      #808080
-set_from_resource $urgent-bg-color	     color14     #ff0000
-#TEXT
-set_from_resource $text-color		         color15     #000000
-set_from_resource $inactive-text-color   color0      #000000
+# -- COLORS -- #
+set_from_resource $bg-color		        color0      #ffffff
+set_from_resource $inactive-bg-color     	color7      #808080
+set_from_resource $urgent-bg-color	     	color6      #ff0000
+set_from_resource $text-color		        color15     #000000
+set_from_resource $inactive-text-color   	color0      #000000
 
 
 # Window colors ~sort of a hack
