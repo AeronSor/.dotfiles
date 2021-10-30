@@ -10,17 +10,8 @@ if [[ -e /usr/share/zsh/manjaro-zsh-prompt ]]; then
 fi
 
 # Source my stuff
-
-# Import colorscheme from 'wal' asynchronously
-(cat ~/.cache/wal/sequences &)
-# Alternative
-cat ~/.cache/wal/sequences
-# TTY support
-source ~/.cache/wal/colors-tty.sh
-
 source .CustomFunctions.sh
 source .scripts/.xsetwacom.sh
-fortune
 
 #THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
 export SDKMAN_DIR="$HOME/.sdkman"

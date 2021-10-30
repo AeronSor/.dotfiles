@@ -237,8 +237,7 @@ focus_follows_mouse no
 
 
 ###--AUTOSTART---###
-exec wal -R #Pywal autotheming
-#exec_always feh --bg-fill /run/media/Hub/Archive/Wallpapers/"Rose.jpg" # Setting the background
+exec_always feh --bg-fill /run/media/Hub/Archive/Wallpapers/futuristic_city.jpg  #Wallpaper
 exec pavucontrol # Sound mixer
 exec_always picom # Compositor
 exec_always --no-startup-id flashfocus # Depends on picom
