@@ -14,7 +14,7 @@ set $mod Mod3
 
 # Font for window titles. Will also be used by the bar unless a different font
 # is used in the bar {} block below.
-font pango:Inconsolata 13
+font pango: SFNS Display 13
 
 # This font is widely installed, provides lots of unicode glyphs, right-to-left
 # text rendering and scalability on retina/hidpi displays (thanks to pango).
@@ -156,7 +156,7 @@ client.urgent            $urgent-bg-color    $urgent-bg-color    $text-color    
 	}
 }
 
-#-- KEYBINDINGS --#
+###KEYBINDINGS###
 
 # -- CORE -- #
 # change focus
@@ -215,49 +215,52 @@ bindsym $mod+Shift+q kill
 # start a terminal
 bindsym $mod+t exec alacritty
 
-# Extra Keybindings
 
-# start Rofi (a program launcher)
-bindsym $mod+d exec rofi -show drun -show-icons
-bindsym $mod+q exec rofi -show filebrowser
-bindsym $mod+y exec rofi -show p -modi p:rofi-power-menu
+#-- MOUSE -- #
 
-bindsym $mod+m exec pavucontrol # start audio mixer
-bindsym $mod+shift+o exec i3blocks
-bindsym $mod+c exec thunar
-bindsym $mod+x exec firefox
-
-# Mouse
-
-# Use Mouse+$mod to drag floating windows to their wanted position
+#Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
 
 #Disabling Mouse focus
 focus_follows_mouse no
 
 
-###--AUTOSTART---###
-exec_always feh --bg-fill /run/media/Hub/Archive/Wallpapers/futuristic_city.jpg  #Wallpaper
-exec pavucontrol # Sound mixer
-exec_always picom # Compositor
-exec_always --no-startup-id flashfocus # Depends on picom
-exec_always i3 gaps inner all set 30 # i3 gaps size
-exec lxsession #Polkit manager
-exec redshift
+#-- EXTRA --#
+
+# Rofi
+	bindsym $mod+d exec rofi -show drun -show-icons
+	bindsym $mod+q exec rofi -show filebrowser
+	bindsym $mod+y exec rofi -show p -modi p:rofi-power-menu
+
+# Misc
+	bindsym $mod+m exec pavucontrol # start audio mixer
+	bindsym $mod+shift+o exec i3blocks
+	bindsym $mod+c exec thunar
+	bindsym $mod+x exec firefox
+
+# Audio
+	bindsym XF86AudioPlay exec playerctl play-pause
+	bindsym XF86AudioRaiseVolume exec pactl set-sink-volume @DEFAULT_SINK@ +5% # raise volume
+	bindsym XF86AudioLowerVolume exec pactl set-sink-volume @DEFAULT_SINK@ -5% # lower volume
+	bindsym XF86AudioMute exec pactl set-sink-mute @DEFAULT_SINK@ toggle # NOT WORKING
 
 
-# Apps
-exec redshift
-exec fcitx -d
-exec tauon
-exec alacritty
-exec firefox
-exec steam
-exec /home/aeron/Applications/ScreenCloud-v1.5.3-x86_64_9892778c625c5c0192c7a2a7dcd09fde.AppImage
+###AUTOSTART###
+	exec_always feh --bg-fill /run/media/Hub/Archive/Wallpapers/futuristic_city.jpg  #Wallpaper
+	exec pavucontrol # Sound mixer
+	exec_always picom # Compositor
+	exec_always --no-startup-id flashfocus # Depends on picom
+	exec_always i3 gaps inner all set 30 # i3 gaps size
+	exec lxsession #Polkit manager
 
 
-# Media player controls
-bindsym XF86AudioPlay exec playerctl play-pause
-bindsym XF86AudioRaiseVolume exec pactl set-sink-volume @DEFAULT_SINK@ +5% # raise volume
-bindsym XF86AudioLowerVolume exec pactl set-sink-volume @DEFAULT_SINK@ -5% # lower volume
-bindsym XF86AudioMute exec pactl set-sink-mute @DEFAULT_SINK@ toggle # NOT WORKING
+# -- APPS -- #
+	exec redshift
+	exec fcitx -d
+	exec tauon
+	exec alacritty
+	exec firefox
+	exec /home/aeron/Applications/ScreenCloud-v1.5.3-x86_64_9892778c625c5c0192c7a2a7dcd09fde.AppImage
+
+
+
