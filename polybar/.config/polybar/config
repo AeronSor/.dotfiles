@@ -31,18 +31,23 @@ alert		 = #D00000
 [bar/mybar]
 ;Module Distribution
 modules-left = i3
-modules-right = date
+modules-right = date pulseaudio
 modules-center = xwindow
+module-margin = 2
 
 ;Tray
 tray-position = right
-tray-padding = 10
+tray-padding = 5
 bottom = true
 
 ;Fonts
+; font-N = <fontconfig pattern>;<vertical offset>
 font-0 = Font Awesome 5 Brands
 font-1 = Font Awesome 5 Free
 font-2 = FontAwesome
+font-3 = URW Gothic
+
+label-font = URW Gothic
 
 [module/xwindow]
 type = internal/xwindow
@@ -219,25 +224,17 @@ format-disconnected =
 
 [module/date]
 type = internal/date
-interval = 5
-
-date =
-date-alt = " %Y-%m-%d"
-
+date = %Y-%m-%d
 time = %H:%M
-time-alt = %H:%M:%S
 
-format-prefix = 
-format-prefix-foreground = ${colors.foreground-alt}
-format-underline = #0a6cf5
+label= %date% %time%
 
-label = %date% %time%
+offset-y = 50
 
 [module/pulseaudio]
 type = internal/pulseaudio
 
-format-volume = <label-volume> <bar-volume>
-label-volume = VOL %percentage%%
+format-volume = <bar-volume>
 label-volume-foreground = ${root.foreground}
 
 label-muted = 🔇 muted

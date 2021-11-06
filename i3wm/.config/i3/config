@@ -14,7 +14,7 @@
 # set $[name] <value>
 
 set $mod Mod3
-set $wallpaper vagabond.jpg
+set $wallpaper futuristic_city
 
 
 # Font for window titles. Will also be used by the bar unless a different font
@@ -236,7 +236,7 @@ focus_follows_mouse no
 
 
 ###AUTOSTART###
-	exec_always feh --bg-fill /run/media/Hub/Archive/Wallpapers/$wallpaper # Wallpaper
+	exec_always feh --bg-fill /run/media/Hub/Archive/Wallpapers/$wallpaper.jpg # Wallpaper
 	exec_always --no-startup-id $HOME/.config/polybar/launch.sh # Starts Polybar
 	exec pavucontrol # Sound mixer
 	exec_always picom # Compositor
