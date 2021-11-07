@@ -11,9 +11,7 @@ call plug#begin('~/.vim/plugged')
 " Syntax : Plug 'git-hub-name/plugin-name'
 Plug 'ap/vim-css-color'
 Plug 'preservim/nerdtree'
-Plug 'ryanoasis/vim-devicons'
 Plug 'mhinz/vim-startify'
-Plug 'dracula/vim'
 Plug 'morhetz/gruvbox'
 
 " Initialize plugin system

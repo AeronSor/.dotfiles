@@ -203,7 +203,7 @@ bindsym $mod+a focus parent
 bindsym $mod+Shift+q kill
 
 # start a terminal
-bindsym $mod+t exec alacritty
+bindsym $mod+t exec urxvt
 
 
 #-- MOUSE -- #
@@ -250,7 +250,7 @@ focus_follows_mouse no
 	exec redshift
 	exec fcitx -d
 	exec tauon
-	exec alacritty
+	exec urxvt
 	exec firefox
 	exec /home/aeron/Applications/ScreenCloud-v1.5.3-x86_64_9892778c625c5c0192c7a2a7dcd09fde.AppImage
 
