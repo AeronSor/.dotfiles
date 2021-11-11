@@ -20,13 +20,13 @@
 #So is this one
 
 [colors]
-background	 = #003071E
-background-alt	 = #444
-foreground	 = #ece4db
-foreground-alt	 = #555
-primary		 = #E85D04
-secondary	 = #E85D04
-alert		 = #D00000
+background=         #003071
+background-alt=     #444
+foreground=         #ece4db
+foreground-alt=     #555
+primary=            #E85D04
+secondary=          #E85D04
+alert=              #D00000
 
 [bar/mybar]
 ;Module Distribution
@@ -45,7 +45,7 @@ bottom = true
 font-0 = Font Awesome 5 Brands
 font-1 = Font Awesome 5 Free
 font-2 = FontAwesome
-font-3 = URW Gothic
+font-3 = Inconsolata
 
 label-font = URW Gothic
 

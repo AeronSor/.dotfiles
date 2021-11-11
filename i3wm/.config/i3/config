@@ -218,9 +218,9 @@ focus_follows_mouse no
 #-- EXTRA --#
 
 # Rofi
-	bindsym $mod+d exec rofi -show drun -show-icons
-	bindsym $mod+q exec rofi -show filebrowser
-	bindsym $mod+y exec rofi -show p -modi p:rofi-power-menu
+	bindsym $mod+d exec rofi -show drun -show-icons -font "Phatone 8"
+	bindsym $mod+q exec rofi -show filebrowser -font "Phatone 8"
+	bindsym $mod+y exec rofi -show p -modi p:rofi-power-menu -font "Phatone 8"
 
 # Misc
 	bindsym $mod+m exec pavucontrol # start audio mixer
