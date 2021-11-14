@@ -1,5 +1,7 @@
 Personal dotfiles for my Arch-Linux i3wm setup 😎
 
+[ UNDER CONSTRUCTION]
+
 <b>Dependencies</b>
 <p>
     There's currently a lot of things missing since i'm new to linux, so I don't remember all
