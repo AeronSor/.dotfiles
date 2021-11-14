@@ -1,4 +1,4 @@
-Personal dotfiles for my i3wm setup 😎
+Personal dotfiles for my Arch-Linux i3wm setup 😎
 
 <b>Dependencies</b>
 <p>
@@ -9,10 +9,10 @@ Personal dotfiles for my i3wm setup 😎
 <div style="background-color:white">
 <ul>
  <li>
-    sudo pacman -S i3-gaps picom rofi lxsession steam obs-studio 
-    discord redshift fcitx rxvt-unicode pavucontrol polybar
+    sudo pacman -S i3-gaps picom rofi lxsession steam(multilib) wine(multilib) obs-studio 
+    discord redshift fcitx rxvt-unicode pavucontrol 
  </li>
- <li>AUR: flashfocus-git tauon-music-box ttf-font-awesome svix-git</li>
+ <li>AUR: flashfocus-git tauon-music-box ttf-font-awesome svix-git polybar </li>
 </ul>
 
 Image below for preview (slightly outdated image)
