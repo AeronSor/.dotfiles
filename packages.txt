@@ -11,11 +11,17 @@ wine
 obs-studio
 discord
 redshift
+
 fcitx
 fcitx-mozc
 fcitx-configtool
+
 rxvt-unicode 
 pavucontrol-o,'0
 atom
+
+nvidia
+nvidia-utils
+
 adobe-source-han-sans-jp-fonts
 adobe-source-han-serif-jp-fonts
