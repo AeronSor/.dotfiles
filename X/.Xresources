@@ -1,41 +1,41 @@
 !! Colorscheme
 
 ! special
-*.foreground:   #1b1d1f
-*.background:   #bfbba5
-*.cursorColor:  #1b1d1f
+*.foreground: #93a1a1
+*.background: #141c21
+*.cursorColor: #afbfbf
 
 ! black
-*.color0:       #000000
-*.color8:       #343131
+*.color0: #263640
+*.color8: #4a697d
 
 ! red
-*.color1:       #000000
-*.color9:       #de4b4b
+*.color1: #d12f2c
+*.color9: #fa3935
 
 ! green
-*.color2:       #e5dad3
-*.color10:      #e6e6e6
+*.color2: #819400
+*.color10: #a4bd00
 
 ! yellow
-*.color3:       #cd4f1a
-*.color11:      #f0c674
+*.color3: #b08500
+*.color11: #d9a400
 
 ! blue
-*.color4:       #4b4b4b
-*.color12:      #d35a77
+*.color4: #2587cc
+*.color12: #2ca2f5
 
 ! magenta
-*.color5:       #f2e5be
-*.color13:      #b294bb
+*.color5: #696ebf
+*.color13: #8086e8
 
 ! cyan
-*.color6:       #2c504b
-*.color14:      #c64559
+*.color6: #289c93
+*.color14: #33c5ba
 
 ! white
-*.color7:       #000000
-*.color15:      #1e1e1e
+*.color7: #bfbaac
+*.color15: #fdf6e3
 
 !! URxvt Appearence
 URxvt*font: xft: Phatone:pixelsize=10:antialias=true:hinting=true
@@ -44,3 +44,10 @@ URxvt.scrollBar_right: false
 URxvt.cursorBlink: true
 URxvt.depth: 24
 URxvt.iso14755: false
+URxvt.internalBorder: 0
+
+!! URxvt behavior
+
+!Copy-paste
+URxvt.keysym.C-S-0x43: eval:selection_to_clipboard
+URxvt.keysym.C-S-0x56: eval:paste_clipboard
