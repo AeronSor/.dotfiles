@@ -12,7 +12,7 @@ Personal dotfiles for my Arch-Linux i3wm setup 😎
     sudo pacman -S i3-gaps picom rofi lxsession steam(multilib) wine(multilib) obs-studio 
     discord redshift fcitx rxvt-unicode pavucontrol 
  </li>
- <li>AUR: flashfocus-git tauon-music-box ttf-font-awesome svix-git polybar </li>
+ <li>AUR: flashfocus-git tauon-music-box ttf-font-awesome svix-git polybar rofi-power-menu </li>
 </ul>
 
 Image below for preview (slightly outdated image)
