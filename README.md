@@ -4,18 +4,14 @@ Personal dotfiles for my Arch-Linux i3wm setup 😎
 
 <b>Dependencies</b>
 <p>
-    There's currently a lot of things missing since i'm new to linux, so I don't remember all
-    my packages
+    To get the dependencies use your package manager and redirect <packages.txt> and <packages_aur.txt>
+    into them
+<br>
+    For pacman and yay
+    <ul>
+        <li>Pacman: sudo pacman -S --needed -<packages.txt</li>
+        <li>yay -S $(cat packages_aur.txt |xargs) --needed</li>
+    </ul>
 </p>
-
-<div style="background-color:white">
-<ul>
- <li>
-    sudo pacman -S i3-gaps picom rofi lxsession steam(multilib) wine(multilib) obs-studio 
-    discord redshift fcitx rxvt-unicode pavucontrol 
- </li>
- <li>AUR: flashfocus-git tauon-music-box ttf-font-awesome svix-git polybar rofi-power-menu </li>
-</ul>
-
 Image below for preview (slightly outdated image)
 <img src="image.png">

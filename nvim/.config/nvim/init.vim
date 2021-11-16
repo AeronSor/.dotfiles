@@ -1,25 +1,39 @@
-set runtimepath^=~/.vim runtimepath+=~/.vim/after
-let &packpath = &runtimepath
-source ~/.vimrc
-
-
 " Specify a directory for plugins
-call plug#begin('~/.vim/plugged')
+call plug#begin('~/.config/nvim/plugged')
 
 " Plugins come here
 
 " Syntax : Plug 'git-hub-name/plugin-name'
-Plug 'ap/vim-css-color'
-Plug 'preservim/nerdtree'
-Plug 'mhinz/vim-startify'
-Plug 'morhetz/gruvbox'
+Plug 'ap/vim-css-color'     " color preview
+Plug 'preservim/nerdtree'   " filetree
+Plug 'mhinz/vim-startify'   " start page
+Plug 'morhetz/gruvbox'      " syntax theme
+Plug 'preservim/tagbar'     " class outline viewer
+Plug 'tpope/vim-commentary' " quick comments with the command <gc> or <gcc>
+"Plug 'neoclide/coc.nvim'    " code completion
+"Plug 'tc50cal/vim-terminal' " run terminal commands inside neovim
+"Plug 'wfxr/minimap.vim'     " minimap for code spacing
+
+" for COC you need to manually install the language completions
+" example :CocInstall coc-python
+" python also requires JEDI for auto-completions for example
 
 " Initialize plugin system
 call plug#end()
 
-" Some behavior configs
+" Keyboard shortcuts
+nmap <F2> :Startify<CR>
+nmap <F8> :TagbarToggle<CR>
+nmap <C-t> :NERDTreeToggle<CR>
+nmap <C-n> :NERDTree<CR>
+nmap <F5> :MinimapToggle<CR>
+
+let g:minimap_width = 10
+let g:minimap_auto_start = 1
+let g:minimap_auto_start_win_enter = 1
+
+" behavior configs
 set nocompatible            " disable compatibility to old-time vi
-set showmatch               " show matching 
 set ignorecase              " case insensitive 
 set mouse=v                 " middle-click paste with 
 set hlsearch                " highlight search 
@@ -40,9 +54,8 @@ filetype plugin on
 syntax on                   " syntax highlighting
 
 " Plugin Behavior
-autocmd vimenter * NERDTree
-autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
-autocmd vimenter * wincmd p
+" autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
+" autocmd vimenter * wincmd p
 
 " Colorscheme
 " makes sure everything loads before the theme

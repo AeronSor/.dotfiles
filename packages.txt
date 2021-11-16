@@ -1,27 +1,38 @@
 i3-gaps
 ntfs-3g
 calcurse
-thunar
 feh
 picom
 rofi
 lxsession
 steam
-wine
+wine-staging
 obs-studio
 discord
 redshift
+vlc
+pavucontrol
+kdenlive
+blender
+unzip
+unrar
+
+ranger
+w3m
 
 fcitx
 fcitx-mozc
 fcitx-configtool
 
-rxvt-unicode 
-pavucontrol-o,'0
-atom
-
 nvidia
 nvidia-utils
+lib32-nvidia-utils
+
+atom
+neovim
+nodejs
+npm
+python-pip
 
 adobe-source-han-sans-jp-fonts
 adobe-source-han-serif-jp-fonts

@@ -1,3 +1,9 @@
-tauon
+rxvt-unicode
+appimagelauncher
+tauon-music-box
 flashfocus-git
 screencloud
+libresprite-git
+font-manager
+
+ctags-git
