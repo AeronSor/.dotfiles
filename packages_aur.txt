@@ -7,3 +7,5 @@ libresprite-git
 font-manager
 
 ctags-git
+
+jmtpfs

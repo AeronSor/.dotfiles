@@ -144,3 +144,5 @@ source /home/aeron/Scripts/Apps.sh
 source /home/aeron/Scripts/Xsetwacom.sh
 
 export PATH=$PATH:/home/aeron/.local/bin
+export VISUAL=nvim
+export EDITOR=nvim

@@ -1,4 +1,4 @@
-#!/bin/zsh
+#!/bin/bash
 
 #Define buttons on the "Wacom Intuos S Pad"
 function custom-xsetwacom {

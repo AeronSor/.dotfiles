@@ -10,29 +10,26 @@ Plug 'mhinz/vim-startify'   " start page
 Plug 'morhetz/gruvbox'      " syntax theme
 Plug 'preservim/tagbar'     " class outline viewer
 Plug 'tpope/vim-commentary' " quick comments with the command <gc> or <gcc>
-"Plug 'neoclide/coc.nvim'    " code completion
-"Plug 'tc50cal/vim-terminal' " run terminal commands inside neovim
-"Plug 'wfxr/minimap.vim'     " minimap for code spacing
-
-" for COC you need to manually install the language completions
-" example :CocInstall coc-python
-" python also requires JEDI for auto-completions for example
 
 " Initialize plugin system
 call plug#end()
 
 " Keyboard shortcuts
+
+" autocmd: command that Vim will execute automatically on {event}
+" nmap : maps to normal mode
+
 nmap <F2> :Startify<CR>
 nmap <F8> :TagbarToggle<CR>
 nmap <C-t> :NERDTreeToggle<CR>
 nmap <C-n> :NERDTree<CR>
-nmap <F5> :MinimapToggle<CR>
+nmap <Space> :noh<Return>
 
-let g:minimap_width = 10
-let g:minimap_auto_start = 1
-let g:minimap_auto_start_win_enter = 1
+" makes python code run in terminal pressing F9
+autocmd FileType python map <buffer> <F9> :w<CR>:exec '!python3' shellescape(@%, 1)<CR>
 
-" behavior configs
+" Behavior configs
+set autochdir               " make the working directory be the same as the file opened
 set nocompatible            " disable compatibility to old-time vi
 set ignorecase              " case insensitive 
 set mouse=v                 " middle-click paste with 
@@ -43,19 +40,17 @@ set softtabstop=4           " see multiple spaces as tabstops so <BS> does the r
 set expandtab               " converts tabs to white space
 set shiftwidth=4            " width for autoindents
 set autoindent              " indent a new line the same amount as the line just typed
-set number                  " add line numbers
+set number relativenumber   " adds hybrid line numbers
 set wildmode=longest,list   " get bash-like tab completions
 set mouse=a                 " enable mouse click
 set clipboard=unnamedplus   " using system clipboard
 set cursorline              " highlight current cursorline
 set ttyfast                 " Speed up scrolling in Vim
-filetype plugin indent on   "allow auto-indenting depending on file type
-filetype plugin on
 syntax on                   " syntax highlighting
 
 " Plugin Behavior
-" autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
-" autocmd vimenter * wincmd p
+autocmd FileType python :TagbarToggle
+let NERDTreeShowBookmarks=1
 
 " Colorscheme
 " makes sure everything loads before the theme

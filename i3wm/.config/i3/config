@@ -81,21 +81,28 @@ bindsym $mod+Shift+0 move container to workspace  $ws10
 # Window/tiling Rules
 
 # Forcing cetain windows to open in certain workspaces
-#assign [class="firefox"]	  $ws1
-#assign [class="alacritty"]       $ws2
-#assign [class="thunar"]	  $ws3
-assign [class="Steam"] 		  $ws4
-assign [class="discord"]	  $ws6
-assign [class="obs"]		  $ws7
-assign [class="Tauon Music Box"]  $ws9
-assign [class="Pavucontrol"]	  $ws10
+#assign [class="firefox"]           $ws1
+#assign [class="urxvt"]             $ws2
+#assign [class="thunar"]            $ws3
+assign [class="Steam"]              $ws4
+assign [class="discord"]            $ws6
+assign [class="obs"]		        $ws7
+assign [class="Tauon Music Box"]    $ws9
+assign [class="Pavucontrol"]	    $ws10
+
+# Other rules
+
+# Just a handy place for chatterino
+for_window [class="chatterino"] floating enable, sticky enable, move position 1610px 2px
+
+for_window [class="Dragon’s Dogma: Dark Arisen"] floating enable
 
 # Enabling gaps
 for_window [class=".*"] border pixel 0
 #for_window [class=".*"] [floating] move absolute position center
 
 # reload the configuration file
-bindsym $mod+Shift+c reload
+#bindsym $mod+Shift+c reload
 # restart i3 inplace (preserves your layout/session, can be used to upgrade i3)
 bindsym $mod+Shift+r restart
 # exit i3 (logs you out of your X session)
@@ -232,15 +239,15 @@ focus_follows_mouse no
 	bindsym XF86AudioPlay exec playerctl play-pause
 	bindsym XF86AudioRaiseVolume exec pactl set-sink-volume @DEFAULT_SINK@ +5% # raise volume
 	bindsym XF86AudioLowerVolume exec pactl set-sink-volume @DEFAULT_SINK@ -5% # lower volume
-	bindsym XF86AudioMute exec pactl set-sink-mute @DEFAULT_SINK@ toggle # NOT WORKING
+#	bindsym XF86AudioMute exec pactl set-sink-mute @DEFAULT_SINK@ toggle # NOT WORKING
 
 
 ###AUTOSTART###
 	exec_always feh --bg-fill /mnt/Hub/Archive/Wallpapers/$wallpaper.jpg # Wallpaper
 	exec_always --no-startup-id $HOME/.config/polybar/launch.sh # Starts Polybar
 	exec pavucontrol # Sound mixer
-	exec_always picom # Compositor
-	exec_always --no-startup-id flashfocus # Depends on picom
+	exec picom # Compositor
+	exec --no-startup-id flashfocus # Depends on picom
 	exec_always i3 gaps inner all set 30 # i3 gaps size
 	exec lxsession #Polkit manager
 
