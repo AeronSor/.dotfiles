@@ -60,3 +60,15 @@ set background=dark
 " Open new split panes to right and below
 set splitright
 set splitbelow
+
+" Clipboard functionality using xclip package(kinda hacky)
+function! ClipboardYank()
+    call system('xclip -i -selection clipboard', @@)
+endfunction
+
+function! ClipboardPaste()
+    let @@ = system('xclip -o -selection clipboard')
+endfunction
+
+vnoremap <silent> y y:call ClipboardYank()<cr>
+nnoremap <silent> p :call ClipboardPaste()<cr>p

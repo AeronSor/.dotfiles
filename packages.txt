@@ -5,25 +5,32 @@ feh
 picom
 rofi
 lxsession
+
 steam
 wine-staging
 winetricks
+
 obs-studio
 discord
 redshift
 vlc
 pavucontrol
-kdenlive
-blender
 xf86-input-wacom
 playerctl
+peek
+
+krita
+gimp
+kdenlive
+blender
 
 unzip
 unrar
 p7zip
 
+thunar
+tumbler
 ranger
-w3m
 
 fcitx
 fcitx-mozc
@@ -45,3 +52,5 @@ gvfs-gphoto2
 
 adobe-source-han-sans-jp-fonts
 adobe-source-han-serif-jp-fonts
+audacity
+xclip

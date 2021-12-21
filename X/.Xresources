@@ -38,7 +38,7 @@
 *.color15: #fdf6e3
 
 !! URxvt Appearence
-URxvt*font: xft: Phatone:pixelsize=10:antialias=true:hinting=true
+URxvt*font: xft: Phatone:pixelsize=10:antialias=true:hinting=true, xtf: FontAwesome
 URxvt.scrollBar: false
 URxvt.scrollBar_right: false
 URxvt.cursorBlink: true

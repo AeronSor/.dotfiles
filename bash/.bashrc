@@ -141,7 +141,7 @@ ex ()
 # my stuff
 source /home/aeron/Scripts/CustomFunctions.sh
 source /home/aeron/Scripts/Apps.sh
-source /home/aeron/Scripts/Xsetwacom.sh
+source /home/aeron/Scripts/custom-xsetwacom.sh
 
 export PATH=$PATH:/home/aeron/.local/bin
 export VISUAL=nvim
