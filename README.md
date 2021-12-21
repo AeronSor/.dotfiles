@@ -4,6 +4,8 @@ Personal dotfiles for my Arch-Linux i3wm setup 😎
 
 <b>Dependencies</b>
 
+Don't forget to enable multilib on your pacman.conf
+
 Pacman: 
 ```
 sudo pacman -S --needed -<~/.dotfiles/packages.txt
