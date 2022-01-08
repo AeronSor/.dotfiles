@@ -16,3 +16,4 @@ jmtpfs
 qalculate-gtk-nognome
 
 stremio
+gamemode
