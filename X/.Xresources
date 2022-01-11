@@ -1,44 +1,43 @@
-!! Colorscheme
-
 ! special
-*.foreground: #93a1a1
-*.background: #141c21
-*.cursorColor: #afbfbf
+*.foreground:   #d5cfdb
+*.background:   #0d0910
+*.cursorColor:  #d5cfdb
 
 ! black
-*.color0: #263640
-*.color8: #4a697d
+*.color0:       #16111a
+*.color8:       #2ea28b
 
 ! red
-*.color1: #d12f2c
-*.color9: #fa3935
+*.color1:       #9893ae
+*.color9:       #fe9bc1
 
 ! green
-*.color2: #819400
-*.color10: #a4bd00
+*.color2:       #332b3a
+*.color10:      #c48ceb
 
 ! yellow
-*.color3: #b08500
-*.color11: #d9a400
+*.color3:       #4d4157
+*.color11:      #6f942e
 
 ! blue
-*.color4: #2587cc
-*.color12: #2ca2f5
+*.color4:       #6e5e7b
+*.color12:      #1db0de
 
 ! magenta
-*.color5: #696ebf
-*.color13: #8086e8
+*.color5:       #9382a1
+*.color13:      #eb94b5
 
 ! cyan
-*.color6: #289c93
-*.color14: #33c5ba
+*.color6:       #b9aec2
+*.color14:      #1d99c2
 
 ! white
-*.color7: #bfbaac
-*.color15: #fdf6e3
+*.color7:       #e5e1e8
+*.color15:      #26ae95
+
 
 !! URxvt Appearence
-URxvt*font: xft:hack:size=15
+URxvt*font: xft:hack:size=15, xft:FontAwesome:pixelsize=11, xft:Font Awesome 5 Free Regular:pixelsize=11, xft:Font Awesome 5 Free Solid:pixelsize=11, xft:Font Awesome 5 Brands:pixelsize=11
 URxvt.scrollBar: false
 URxvt.cursorBlink: true
 URxvt.depth: 24

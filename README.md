@@ -19,5 +19,7 @@ yay -S $(cat ~/.dotfiles/packages_aur.txt |xargs) --needed
 
 
 </p>
-Image below for preview (slightly outdated image)
-<img src="image.png">
+Image below for preview
+<img src="bspwm.png">
+<img src="bspwm-2.png">
+<img src="bspwm-3.png">

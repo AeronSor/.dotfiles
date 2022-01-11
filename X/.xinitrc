@@ -8,6 +8,6 @@ usermodmap=$HOME/.Xmodmap
 sysresources=/etc/X11/xinit/.Xresources
 sysmodmap=/etc/X11/xinit/.Xmodmap
 
-xrdb -load "$HOME/.Xresources" &
-setxkbmap -model abnt &
-exec i3
+# Mouse cursor workaround for bspwm
+xsetroot -cursor_name left_ptr &
+exec bspwm

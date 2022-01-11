@@ -15,47 +15,134 @@
 #So is this one
 
 [colors]
-background=         #003071
-background-alt=     #444
-foreground=         #ece4db
-foreground-alt=     #555
+background=         #2b1430
+background-alt=     #421c3e
+foreground=         #e3dee6 
+foreground-alt=     #ab90b2
 primary=            #E85D04
 secondary=          #E85D04
 alert=              #D00000
 
 [bar/mybar]
+; Sizing and offsetting
+width= 100%
+height= 3%
+
+offset-x= 0%
+offset-y= 0%
+
+padding-left= 5
+
+; Styling
+background = ${colors.background}
+
+; Rules
+wm-restack = bspwm
 enable-ipc = true
+bottom = false
 
 ;Module Distribution
-modules-left = i3
-modules-right = date pulseaudio
+modules-left = bspwm
+modules-right = date pacman-updates pulseaudio 
 modules-center = xwindow
 module-margin = 2
 
 ;Tray
 tray-position = right
 tray-padding = 5
-bottom = true
+tray-detached = false
+tray-background = ${colors.background}
 
-;Fonts
+; Fonts
 ; font-N = <fontconfig pattern>;<vertical offset>
-font-0 = Font Awesome 5 Brands
-font-1 = Font Awesome 5 Free
-font-2 = FontAwesome
-font-3 = Inconsolata
 
-label-font = URW Gothic
+font-0 = FontAwesome
+font-1 = Font Awesome 5 Free Regular
+font-2 = Font Awesome 5 Free Solid
+font-3 = Font Awesome 5 Brands
+font-4 = hack
+
+label-font = hack
+
+[module/bspwm]
+type = internal/bspwm
+
+; General Rules
+pin-workspaces = true
+inline-mode = false
+enable-click = true
+
+;label-separator = | 
+;label-separator-foreground = #938c75
+
+; Focused
+label-focused = %icon%  
+label-focused-foreground = ${colors.foreground}
+label-focused-padding = 2
+
+; Occupied
+label-occupied = %icon%
+label-occupied-foreground = ${colors.foreground-alt}
+label-occupied-padding = 2
+
+; Empty
+label-empty = %icon%
+label-empty-foreground = ${colors.foreground-alt}
+label-empty-padding = 2
+
+; Urgent
+label-urgent = %icon%
+label-urgent-padding = 2
+label-urgent-background=${colors.alert}
+
+; Ws-icon-[0-9]+ = label;icon
+
+ws-icon-0 = 1; 
+
+ws-icon-1 = 2;
+
+ws-icon-2 = 3;
+
+ws-icon-3 = 4;
+
+ws-icon-4 = 5; 
+
+ws-icon-5 = 6;
+
+ws-icon-6 = 7; 
+
+ws-icon-7 = 8;
+
+ws-icon-8 = 9;
+
+ws-icon-9 = 10;
+
+[module/mpd]
+type = internal/mpd
+format-online = <label-song>  <icon-prev> <icon-stop> <toggle> <icon-next>
+
+icon-prev = 
+icon-stop = 
+icon-play = 
+icon-pause = 
+icon-next = 
+
+label-song-maxlen = 25
+label-song-ellipsis = true
 
 [module/xwindow]
 type = internal/xwindow
 label = %title:0:30:...%
 
-; [module/pacman-packages]
-; type = custom/ipc
-; hook-0 = sudo pacman -Qu | wc -l
-; format-prefix = " "
-; click-left = updatepackages
-; initial = 1
+[module/pacman-updates]
+type = custom/script
+exec = checkupdates | wc -l
+interval = 1000
+label = Pkgs: %output%
+format-prefix = "  "
+format-prefix-foreground = #fefefe
+format-foreground = ${colors.foreground}
+format-background = ${colors.background}
 
 ; [module/xkeyboard]
 ; type = internal/xkeyboard
@@ -83,75 +170,6 @@ label-mounted = %{F#0a81f5}%mountpoint%%{F-}: %percentage_used%%
 label-unmounted = %mountpoint% not mounted
 label-unmounted-foreground = ${colors.foreground-alt}
 
-[module/i3]
-type = internal/i3
-format = <label-state> <label-mode>
-pin-workspaces = true
-strip-wsnumbers = true
-index-sort = true
-wrapping-scroll = false
-
-label-mode-padding = 2
-label-mode-foreground = #000
-label-mode-background = ${colors.primary}
-
-; focused = Active workspace on focused monitor
-label-focused = %icon%
-label-focused-background = ${colors.background-alt}
-label-focused-underline= ${colors.primary}
-label-focused-padding = 2
-
-; unfocused = Inactive workspace on any monitor
-label-unfocused = %icon%
-label-unfocused-padding = 2
-
-; visible = Active workspace on unfocused monitor
-label-visible = %icon%
-label-visible-background = ${self.label-focused-background}
-label-visible-underline = ${self.label-focused-underline}
-label-visible-padding = ${self.label-focused-padding}
-
-; urgent = Workspace with urgency hint set
-label-urgent = %icon%
-label-urgent-background = ${colors.alert}
-label-urgent-padding = 2
-
-; ws-icon-[0-9]+ = <label>;<icon>
-; NOTE: The <label> needs to match the name of the i3 workspace
-; Neither <label> nor <icon> can contain a semicolon (;)
-;
-ws-icon-0 = 1;
-ws-icon-1 = 2;
-ws-icon-2 = 3;
-ws-icon-3 = 4;
-ws-icon-4 = 5;
-ws-icon-5 = 6;
-ws-icon-6 = 7;
-ws-icon-7 = 8;
-ws-icon-8 = 9;
-ws-icon-9 = 10;
-ws-icon-10 = 11;
-ws-icon-11 = 12
-ws-icon-12 = 13;
-
-ws-icon-default = ♟
-
-
-; Separator in between workspaces
-;label-separator = |
-
-[module/mpd]
-type = internal/mpd
-format-online = <label-song>  <icon-prev> <icon-stop> <toggle> <icon-next>
-
-icon-prev = 
-icon-stop = 
-icon-play = 
-icon-pause = 
-icon-next = 
-
-label-song-maxlen = 25
-label-song-ellipsis = true
 
 [module/xbacklight]
 type = internal/xbacklight
@@ -386,4 +404,3 @@ screenchange-reload = true
 margin-top = 5
 margin-bottom = 5
 
-; vim:ft=dosini

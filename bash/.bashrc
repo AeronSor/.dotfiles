@@ -7,6 +7,8 @@ alias ld="xrdb -load ~/.Xresources"
 alias ll="ls -al"
 alias pi="nvim ~/.config/picom/picom.conf"
 alias po="nvim ~/.config/polybar/config"
+alias bs="nvim $HOME/.config/bspwm/bspwmrc"
+alias sx="nvim $HOME/.config/sxhkd/sxhkdrc"
 
 #Sourcing
 source /home/aeron/Scripts/CustomFunctions.sh
