@@ -1,7 +1,6 @@
-Personal dotfiles for my Arch-Linux i3wm setup 😎
+Personal dotfiles for my Arch-Linux bspwm setup 😎
 
 [ UNDER CONSTRUCTION]
-[ Also planning on switching to BSPWM ]
 
 <b>Dependencies</b>
 
