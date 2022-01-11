@@ -16,6 +16,7 @@
 
 [colors]
 background=         #2b1430
+background-alpha=   #00
 background-alt=     #421c3e
 foreground=         #e3dee6 
 foreground-alt=     #ab90b2
@@ -28,8 +29,8 @@ alert=              #D00000
 width= 100%
 height= 3%
 
-offset-x= 0%
-offset-y= 0%
+offset-x= 0
+offset-y= 0
 
 padding-left= 5
 
@@ -43,7 +44,7 @@ bottom = false
 
 ;Module Distribution
 modules-left = bspwm
-modules-right = date pacman-updates pulseaudio 
+modules-right = wlan date pacman-updates pulseaudio 
 modules-center = xwindow
 module-margin = 2
 
@@ -78,6 +79,7 @@ enable-click = true
 ; Focused
 label-focused = %icon%  
 label-focused-foreground = ${colors.foreground}
+label-focused-background = ${colors.background-alpha}
 label-focused-padding = 2
 
 ; Occupied
@@ -138,7 +140,7 @@ label = %title:0:30:...%
 type = custom/script
 exec = checkupdates | wc -l
 interval = 1000
-label = Pkgs: %output%
+label = %output%
 format-prefix = "  "
 format-prefix-foreground = #fefefe
 format-foreground = ${colors.foreground}
@@ -209,10 +211,10 @@ card = intel_backlight
 ; format-underline = #4bffdc
 ; label = %percentage_used%%
 
-;[module/wlan]
-;type = internal/network
-;interface = net1
-;interval = 3.0
+[module/wlan]
+type = internal/network
+interface = net1
+interval = 3.0
 
 ;format-connected = <ramp-signal> <label-connected>
 ;format-connected-underline = #9f78e1
@@ -255,6 +257,8 @@ time = %H:%M
 
 label= %date%  %time%
 
+click-left =
+
 offset-y = 50
 
 [module/pulseaudio]
@@ -263,7 +267,7 @@ type = internal/pulseaudio
 format-volume = <bar-volume>
 label-volume-foreground = ${root.foreground}
 
-label-muted = 🔇 muted
+label-muted =  muted
 label-muted-foreground = #666
 
 bar-volume-width = 10
