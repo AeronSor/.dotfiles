@@ -9,6 +9,8 @@ alias pi="nvim ~/.config/picom/picom.conf"
 alias po="nvim ~/.config/polybar/config"
 alias bs="nvim $HOME/.config/bspwm/bspwmrc"
 alias sx="nvim $HOME/.config/sxhkd/sxhkdrc"
+alias vim-commands="nvim -R /mnt/Hub/Documents/vim-commands.txt"
+alias xm="xmodmap ~/.Xmodmap"
 
 #Sourcing
 source /home/aeron/Scripts/CustomFunctions.sh

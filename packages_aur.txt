@@ -6,14 +6,12 @@ screencloud
 libresprite-git
 qimgv-git
 gromit-mpx
-
-otf-font-awesome-4
+gamemode
+stremio
 font-manager
-
 ctags-git
-
 jmtpfs
 qalculate-gtk-nognome
 
-stremio
-gamemode
+
+

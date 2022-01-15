@@ -17,8 +17,12 @@ bspc config gapless_monocle      true
 
 # Permanent
 bspc rule -a "Steam"              desktop=^6
+bspc rule -a "discord"            desktop=^8
 bspc rule -a "Tauon Music Box"    desktop=^9
 bspc rule -a "Pavucontrol"        desktop=^10
+
+bspc rule -a "steam_app_335300"   border=off # Dark souls II
+
 
 #----Mouse----#
 
@@ -31,11 +35,11 @@ bspc config pointer_action1 move
 setxkbmap br &
 xmodmap ~/.Xmodmap &
 sxkhd -c $HOME/.config/sxhkd/sxhkdrc &
-xrdb -load "$HOME/.Xresources" &
 sh $HOME/.config/polybar/launch.sh
 feh --bg-fill /mnt/Hub/Archive/Wallpapers/Rose.jpg
 
 # Programs
+xrdb -load "$HOME/.Xresources" 
 urxvt &
 pavucontrol &
 tauon &

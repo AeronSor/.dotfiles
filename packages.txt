@@ -1,10 +1,12 @@
-i3-gaps
+bspwm
 ntfs-3g
 calcurse
 feh
 picom
 rofi
 lxsession
+audacity
+xclip
 
 steam
 wine-staging
@@ -17,7 +19,6 @@ vlc
 pavucontrol
 xf86-input-wacom
 playerctl
-peek
 
 krita
 gimp
@@ -54,5 +55,4 @@ gvfs-gphoto2
 
 adobe-source-han-sans-jp-fonts
 adobe-source-han-serif-jp-fonts
-audacity
-xclip
+
