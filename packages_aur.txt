@@ -1,9 +1,9 @@
+polybar
 rxvt-unicode
 appimagelauncher
 tauon-music-box
 flashfocus-git
 screencloud
-libresprite-git
 qimgv-git
 gromit-mpx
 gamemode

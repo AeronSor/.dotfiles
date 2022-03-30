@@ -14,15 +14,40 @@
 ;This way of commenting is valid
 #So is this one
 
+#[colors]
+#Purple Theme
+;background=         #2b1430
+
+; background-alpha=   #8165a7
+; background-alt=     #421c3e
+; foreground=         #e3dee6 
+; foreground-alt=     #ab90b2
+; primary=            #E85D04
+; secondary=          #E85D04
+; alert=              #D00000
+
+; [colors]
+; #Inside Theme
+; background=         #151515
+; background-alpha=   #C7493A
+; background-alt=     #202020
+; foreground=         #e3dee6
+; foreground-alt=     #d9ead3
+; primary=            #E85D04
+; secondary=          #E85D04
+; alert=              #FF1004
+
 [colors]
-background=         #2b1430
-background-alpha=   #8165a7
-background-alt=     #421c3e
-foreground=         #e3dee6 
-foreground-alt=     #ab90b2
-primary=            #E85D04
-secondary=          #E85D04
-alert=              #D00000
+#Elden Ring Theme
+background=             #192324
+background-alpha=       #31403E
+background-alt=         #677356
+foreground=             #BCBE8C
+foreground-alt=         #D9D2B0
+foreground-alt-empty=   #89846b
+primary=                #466748
+secondary=              #B07943
+alert=                  #F2D16D
 
 [bar/mybar]
 ; Sizing and offsetting
@@ -42,7 +67,7 @@ bottom = false
 
 ;Module Distribution
 modules-left = bspwm
-modules-right =  date powermenu filesystem pacman-updates pulseaudio 
+modules-right =  date filesystem pacman-updates pulseaudio 
 modules-center = xwindow
 module-margin = 2
 
@@ -86,8 +111,8 @@ label-occupied-foreground = ${colors.foreground-alt}
 label-occupied-padding = 2
 
 ; Empty
-label-empty = %icon%
-label-empty-foreground = ${colors.foreground-alt}
+label-empty = %icon% 
+label-empty-foreground = ${colors.foreground-alt-empty}
 label-empty-padding = 2
 
 ; Urgent
@@ -121,6 +146,7 @@ ws-icon-9 = 10;
 [module/xwindow]
 type = internal/xwindow
 label = %title:0:30:...%
+format-background = ${}
 
 
 [module/pacman-updates]

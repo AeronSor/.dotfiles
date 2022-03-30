@@ -28,11 +28,11 @@ mod3 + g
 
 # Set the window state
 mod3 + {t,shift + t,s,f}
-	bspc node -t {tiled,pseudo_tiled,floating,fullscreen}
+	bspc node -t {tiled & notify-send -t 450 "Tiled", pseudo_tiled & notify-send -t 450 "Pseudo-Tiled", floating & notify-send -t 450 "Floating", fullscreen}
 
 # Set the node flags
 mod3 + ctrl + {m,x,y,z}
-	bspc node -g {marked,locked,sticky,private}
+	bspc node -g {marked & notify-send -t 450 "Marked",locked & notify-send -t 450 "Locked",sticky & notify-send -t 450 "Sticky",private & notify-send -t 450 "Private"}
 
 #--Focus/swap--#
 
@@ -41,8 +41,8 @@ mod3 + {_,shift + }{Left,Down,Up,Right}
 	bspc node -{f,s} {west,south,north,east}
 
 # focus the node for the given path jump
-mod3 + {p,b,comma,period}
-	bspc node -f @{parent,brother,first,second}
+#mod3 + {p,b,comma,period}
+#	bspc node -f @{parent,brother,first,second}
 
 # focus the next/previous desktop in the current monitor
 mod3 + bracket{left,right}
@@ -73,11 +73,11 @@ mod3 + ctrl + {1-9}
 	bspc node -o 0.{1-9}
 
 # cancel the preselection for the focused node
-mod3 + ctrl + space
+mod3 + ctrl + c
 	bspc node -p cancel
 
 # cancel the preselection for the focused desktop
-mod3 + ctrl + shift + space
+mod3 + ctrl + shift + c
 	bspc query -N -d | xargs -I id -n 1 bspc node id -p cancel
 
 # Move/resize
@@ -92,9 +92,6 @@ mod3 + alt + shift + {Left,Down,Up,Right}
 
 
 #----MISC bindings----#
-mod3 + y
-	rofi -show p -modi p:rofi-power-menu -font "hack 14"
-
 mod3 + c
     thunar
 
@@ -107,14 +104,27 @@ mod3 + Return
 
 # program launcher
 mod3 + d
-	rofi -show drun -show-icons -font "hack 14"
+    $HOME/.config/rofi/launchers/colorful/launcher.sh
 
+# rofi power-menu
+mod3 + p
+    $HOME/.config/rofi/applets/applets/powermenu.sh
 
+# flameshot
+shift + alt + 2
+    flameshot gui
 
+# audio
+XF86Audio{Raise,Lower}Volume
+    amixer sset Master {5%+,5%-}
 
+XF86AudioMute
+    amixer sset Master 1+ toggle
 
+XF86AudioPlay
+    playerctl play-pause
 
-
-
+shift + XF86Audio{Raise,Lower}Volume
+    playerctl {next, previous}
 
 

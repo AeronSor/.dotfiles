@@ -1,4 +1,8 @@
 bspwm
+sxhkd
+libnotify
+dunst
+
 ntfs-3g
 calcurse
 feh
@@ -15,11 +19,12 @@ winetricks
 obs-studio
 discord
 redshift
-vlc
+
 pavucontrol
-xf86-input-wacom
+vlc
 playerctl
 
+xf86-input-wacom
 krita
 gimp
 kdenlive
@@ -37,6 +42,14 @@ fcitx
 fcitx-mozc
 fcitx-configtool
 
+xorg-server
+xorg-xinit
+xorg-xgamma
+
+mesa
+lib32-mesa
+xf86-video-intel
+
 nvidia
 nvidia-utils
 lib32-nvidia-utils
@@ -53,6 +66,10 @@ mtpfs
 gvfs-mtp
 gvfs-gphoto2
 
-adobe-source-han-sans-jp-fonts
-adobe-source-han-serif-jp-fonts
+adobe-source-han-sans-otc-fonts
+adobe-source-han-serif-otc-fonts
+lxappearance
+
+pacman-contrib
+man
 
