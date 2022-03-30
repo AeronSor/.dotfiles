@@ -11,6 +11,7 @@ rofi
 lxsession
 audacity
 xclip
+dunst
 
 steam
 wine-staging
