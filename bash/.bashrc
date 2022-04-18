@@ -20,5 +20,6 @@ source $HOME/Scripts/custom-xsetwacom.sh
 #Exporting
 export PATH=$PATH:/home/aeron/.local/bin
 export PATH=$PATH:/home/aeron/Applications/aseprite/build/bin
+export PATH=$PATH:/home/aeron/Scripts/
 export VISUAL=/usr/bin/nvim
 export EDITOR=/usr/bin/nvim

@@ -38,9 +38,10 @@ setxkbmap br &
 xmodmap ~/.Xmodmap &
 sxkhd -c $HOME/.config/sxhkd/sxhkdrc &
 sh $HOME/.config/polybar/launch.sh
-feh --bg-fill /mnt/Hub/Archive/Wallpapers/MON.jpg
-lxsession &
+feh --bg-fill /mnt/Hub/Archive/Wallpapers/lain2.jpg
 dunst &
+lxsession &
+
 
 # Sound
 #pipewire &

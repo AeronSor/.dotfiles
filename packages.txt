@@ -2,6 +2,7 @@ bspwm
 sxhkd
 libnotify
 dunst
+network-manager-applet
 
 ntfs-3g
 calcurse
@@ -12,6 +13,7 @@ lxsession
 audacity
 xclip
 dunst
+evince
 
 steam
 wine-staging
