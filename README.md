@@ -8,14 +8,16 @@ Don't forget to enable multilib on your pacman.conf
 
 Pacman: 
 ```
-sudo pacman -S --needed -<~/.dotfiles/packages.txt
+sudo pacman -S --needed -<~/.dotfiles/dependencies/core.txt
 ```
 
 yay: 
 ```
-yay -S $(cat ~/.dotfiles/packages_aur.txt |xargs) --needed
+yay -S $(cat ~/.dotfiles/dependencies/core_aur.txt |xargs) --needed
 ```
-
+I am just storing a list of dependencies for now, because I don't know
+a better way to keep track of them o(TヘTo), if you do, let me know ;)
+(I might write a script to handle just that in the future)
 
 </p>
 Image below for preview

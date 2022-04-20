@@ -1,0 +1,8 @@
+polybar
+qimgv-git
+font-manager
+jmtpfs
+
+
+
+

@@ -1,0 +1,7 @@
+ctags-git
+qalculate-gtk-nognome
+gamemode
+stremio
+gromit-mpx
+tauon-music-box
+appimagelauncher

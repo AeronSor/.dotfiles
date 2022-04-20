@@ -100,7 +100,7 @@ mod3 + x
 
 # terminal emulator
 mod3 + Return
-	urxvt
+	st
 
 # program launcher
 mod3 + d

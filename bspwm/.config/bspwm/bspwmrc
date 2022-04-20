@@ -51,7 +51,7 @@ lxsession &
 
 # Programs
 xrdb -load "$HOME/.Xresources" 
-urxvt &
+st &
 pavucontrol &
 tauon &
 picom &

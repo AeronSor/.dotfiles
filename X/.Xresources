@@ -37,7 +37,7 @@
 
 
 !! URxvt Appearence
-URxvt*font: xft:hack:size=15, xft:FontAwesome:pixelsize=11, xft:Font Awesome 5 Free Regular:pixelsize=11, xft:Font Awesome 5 Free Solid:pixelsize=11, xft:Font Awesome 5 Brands:pixelsize=11
+URxvt*font: xft:hack:size=15, xft:FontAwesome:pixelsize=11, xft:Font Awesome 5 Free Regular:pixelsize=11, xft:Font Awesome 5 Free Solid:pixelsize=11, xft:Font Awesome 5 Brands:pixelsize=11, ttf:Symbols Nerd Font
 URxvt.scrollBar: false
 URxvt.cursorBlink: true
 URxvt.depth: 24

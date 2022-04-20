@@ -1,15 +1,16 @@
-" Specify a directory for plugins
+    " Specify a directory for plugins
 call plug#begin('~/.config/nvim/plugged')
 
 " Plugins come here
 
 " Syntax : Plug 'git-hub-name/plugin-name'
-Plug 'ap/vim-css-color'     " color preview
-Plug 'preservim/nerdtree'   " filetree
-Plug 'mhinz/vim-startify'   " start page
-Plug 'morhetz/gruvbox'      " syntax theme
-Plug 'preservim/tagbar'     " class outline viewer
-Plug 'tpope/vim-commentary' " quick comments with the command <gc> or <gcc>
+Plug 'ap/vim-css-color'                                             " color preview
+Plug 'preservim/nerdtree'                                           " filetree
+Plug 'mhinz/vim-startify'                                           " start page
+Plug 'morhetz/gruvbox'                                              " syntax theme
+Plug 'preservim/tagbar'                                             " class outline viewer
+Plug 'tpope/vim-commentary'                                         " quick comments with the command <gc> or <gcc>
+Plug 'turbio/bracey.vim', {'do': 'npm install --prefix-server'}     " live preview of of HTML/CSS/JSS files
 
 " Initialize plugin system
 call plug#end()
@@ -27,6 +28,10 @@ nmap <Space> :noh<Return>
 
 " makes python code run in terminal pressing F9
 autocmd FileType python map <buffer> <F9> :w<CR>:exec '!python3' shellescape(@%, 1)<CR>
+
+" Ensures correct pathing for Python support
+let g:python3_host_prog = '/usr/bin/python3'
+let g:python_host_prog = '/usr/bin/python2'
 
 " Behavior configs
 set autochdir               " make the working directory be the same as the file opened
