@@ -28,7 +28,7 @@ mod3 + g
 
 # Set the window state
 mod3 + {t,shift + t,s,f}
-	bspc node -t {tiled & notify-send -t 450 "Tiled", pseudo_tiled & notify-send -t 450 "Pseudo-Tiled", floating & notify-send -t 450 "Floating", fullscreen}
+	bspc node -t {tiled & notify-send -t 450 "Tiled", pseudo_tiled & notify-send -t 450 "Pseudo-Tiled", floating & notify-send -t 450 "Floating", fullscreen & dsuntify -t 450 "Fullscreen"}
 
 # Set the node flags
 mod3 + ctrl + {m,x,y,z}

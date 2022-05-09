@@ -28,6 +28,8 @@ evince
 thunar
 tumbler
 ranger
+mpv
+w3m
 
 unzip
 unrar
