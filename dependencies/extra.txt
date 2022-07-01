@@ -20,6 +20,8 @@ winetricks
 
 vlc
 audacity
+yabridge
+yabridgectl
 
 fcitx
 fcitx-mozc
@@ -28,3 +30,5 @@ fcitx-configtool
 adobe-source-han-sans-otc-fonts
 adobe-source-han-serif-otc-fonts
 lxappearance
+
+yt-dlp

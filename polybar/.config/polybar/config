@@ -67,7 +67,7 @@ bottom = false
 
 ;Module Distribution
 modules-left = bspwm
-modules-right =  date filesystem pacman-updates pulseaudio 
+modules-right =  date filesystem pacman-updates aur-updates pulseaudio 
 modules-center = xwindow
 module-margin = 2
 
@@ -159,6 +159,15 @@ format-prefix-foreground = #fefefe
 format-foreground = ${colors.foreground}
 format-background = ${colors.background}
 
+[module/aur-updates]
+type = custom/script
+exec = yay -Qua | wc -l
+interval = 1000
+label = %output%
+format-prefix = ": "
+format-prefix-foreground = #fefefe
+format-foreground = ${colors.foreground}
+format-background = ${colors.background}
 
 [module/filesystem]
 type = internal/fs

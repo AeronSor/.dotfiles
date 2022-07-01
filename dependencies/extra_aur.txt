@@ -1,4 +1,6 @@
 noto-fonts-emoji
+splatmoji
+
 nvim-packer-git
 ctags-git
 qalculate-gtk-nognome

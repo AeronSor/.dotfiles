@@ -4,6 +4,9 @@ pgrep -x sxhkd > /dev/null || sxhkd &
 
 bspc monitor -d 1 2 3 4 5 6 7 8 9 10
 
+WP='/mnt/Hub/Archive/Wallpapers/MON.jpg'
+
+
 #----Config----#
 
 bspc config border_width         0
@@ -17,10 +20,22 @@ bspc config ignore_ewmh_focus true
 
 #----Rules----#
 
-# Permanent
-bspc rule -a "Steam"              desktop=^7
-bspc rule -a "Tauon Music Box"    desktop=^9
-bspc rule -a "Pavucontrol"        desktop=^10
+bspc rule -a "Steam"                            desktop=^7
+bspc rule -a "Tauon Music Box"                  desktop=^9
+bspc rule -a "Pavucontrol"                      desktop=^10
+bspc rule -a "ark"                              state=floating
+
+bspc rule -a "obsidian"                         desktop=^6
+bspc rule -a "krita"                            desktop=^5
+bspc rule -a "Blender"                          desktop=^5
+bspc rule -a "Bitwig Studio"                    desktop=^5
+bspc rule -a "Godot"                            desktop=^5
+bspc rule -a "kdenlive"                         desktop=^5
+
+# Runescape
+bspc rule -a "net-runelite-client-RuneLite"     desktop=^8
+bspc rule -a "net-runelite-client-RuneLite"     state=pseudo_tiled
+
 
 #----Mouse----#
 
@@ -29,19 +44,32 @@ bspc config pointer_action1 move
 
 #----Autostart----#
 
-# Config stuff
-setxkbmap br &
-xmodmap ~/.Xmodmap &
-sxkhd -c $HOME/.config/sxhkd/sxhkdrc &
+feh --bg-fill $WP 
 sh $HOME/.config/polybar/launch.sh
-feh --bg-fill /mnt/Hub/Archive/Wallpapers/cozycity.png
-dunst &
-lxsession &
 
-# Programs
-st &
-pavucontrol &
-tauon &
-picom &
-flameshot &
-fcitx &
+# Makes sure those don't run on reloading config
+[ "$1" = 0 ] && {
+
+    # One-shot scripts
+    sh ~/Scripts/bspwm/send-terminal.sh
+
+    # Config stuff
+    setxkbmap br &
+    xmodmap ~/.Xmodmap &
+    sxkhd -c $HOME/.config/sxhkd/sxhkdrc &
+
+
+    dunst &
+    lxsession &
+
+
+
+    # Programs
+    st &
+    pavucontrol &
+    tauon &
+    picom &
+    flameshot &
+    fcitx &
+    obsidian &
+}

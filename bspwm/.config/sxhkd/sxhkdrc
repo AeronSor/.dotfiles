@@ -1,97 +1,118 @@
 #----BSPWM Bindings----#
 
+
+#--Core bindings------------------------------------------------------------------
+
+# Show Help
+mod3 + F1
+    ~/Scripts/bspwm/sxhkd-help.sh
+
 # Quit/Restart bspwm
 mod3 + alt + {q,r}
-	bspc {quit,wm -r}
+    bspc {quit,wm -r}
 
 # Reload sxhkd
 mod3 + Escape
-	pkill -USR1 -x sxhkd
+    pkill -USR1 -x sxhkd
 
 # Kill window
 mod3 + {_,shift + }q
-	bspc node -{c,k}
+    bspc node -{c,k}
 
-# Alternate between the tiled and monocle layout
-mod3 + m
-	bspc desktop -l next
 
-# Send the newest marked node to the newest preselected node
-#mod3 + y
-#	bspc node newest.marked.local -n newest.!automatic.local
+#--State/flags--------------------------------------------------------------------
 
-# Swap the current node and the biggest window
-mod3 + g
-	bspc node -s biggest.window
-
-#--State/flags--#
 
 # Set the window state
 mod3 + {t,shift + t,s,f}
-	bspc node -t {tiled & notify-send -t 450 "Tiled", pseudo_tiled & notify-send -t 450 "Pseudo-Tiled", floating & notify-send -t 450 "Floating", fullscreen & dsuntify -t 450 "Fullscreen"}
+    bspc node -t {tiled & notify-send -t 450 "Tiled", pseudo_tiled & notify-send -t 450 "Pseudo-Tiled", floating & notify-send -t 450 "Floating", fullscreen & dsuntify -t 450 "Fullscreen"}
+
+# Alternate between the tiled and monocle layout
+mod3 + m
+    bspc desktop -l next
 
 # Set the node flags
 mod3 + ctrl + {m,x,y,z}
-	bspc node -g {marked & notify-send -t 450 "Marked",locked & notify-send -t 450 "Locked",sticky & notify-send -t 450 "Sticky",private & notify-send -t 450 "Private"}
+    bspc node -g {marked & notify-send -t 450 "Marked",locked & notify-send -t 450 "Locked",sticky & notify-send -t 450 "Sticky",private & notify-send -t 450 "Private"}
 
-#--Focus/swap--#
 
-# focus the node in the given direction
+#--Focus/swap---------------------------------------------------------------------
+
+
+# Focus the node in the given direction
 mod3 + {_,shift + }{Left,Down,Up,Right}
-	bspc node -{f,s} {west,south,north,east}
+    bspc node -{f,s} {west,south,north,east}
 
-# focus the node for the given path jump
+# Focus the node for the given path jump
 #mod3 + {p,b,comma,period}
-#	bspc node -f @{parent,brother,first,second}
+#   bspc node -f @{parent,brother,first,second}
 
-# focus the next/previous desktop in the current monitor
+# Focus the next/previous desktop in the current monitor
 mod3 + bracket{left,right}
-	bspc desktop -f {prev,next}.local
+    bspc desktop -f {prev,next}.local
 
-# focus the last node/desktop
+# Focus the last node/desktop
 mod3 + {grave,Tab}
-	bspc {node,desktop} -f last
+    bspc {node,desktop} -f last
 
 # focus the older or newer node in the focus history
 mod3 + {o,i}
-	bspc wm -h off; \
-	bspc node {older,newer} -f; \
-	bspc wm -h on
+    bspc wm -h off; \
+    bspc node {older,newer} -f; \
+    bspc wm -h on
 
 # focus or send to the given desktop
 mod3 + {_,shift + }{1-9,0}
-	bspc {desktop -f,node -d} '^{1-9,10}'
+    bspc {desktop -f,node -d} '^{1-9,10}'
 
-# Preselect
+# Swap the current node and the biggest window
+mod3 + g
+    bspc node -s biggest.window
 
-# preselect the direction
+
+#--Preselect--------------------------------------------------------------------
+
+
+# Preselect the direction
 mod3 + ctrl + {Left,Down,Up,Right}
-	bspc node -p {west,south,north,east}
+    bspc node -p {west,south,north,east}
 
-# preselect the ratio
+# Preselect the ratio
 mod3 + ctrl + {1-9}
-	bspc node -o 0.{1-9}
+    bspc node -o 0.{1-9}
 
-# cancel the preselection for the focused node
+# Cancel preselection focused node
 mod3 + ctrl + c
-	bspc node -p cancel
+    bspc node -p cancel
 
-# cancel the preselection for the focused desktop
+# Cancel preselection focused desktop
 mod3 + ctrl + shift + c
-	bspc query -N -d | xargs -I id -n 1 bspc node id -p cancel
+    bspc query -N -d | xargs -I id -n 1 bspc node id -p cancel
 
-# Move/resize
+
+#--Move/Resize--------------------------------------------------------------------
+
+
+# move focused node to preselection
+mod3 + shift + m
+    bspc node -n last.!automatic
+
+# Rotate tree
+mod3 + shift + {d, a}
+    bspc node @/ -C {forward, backward}
 
 # expand a window by moving one of its side outward
 mod3 + alt + {Left,Down,Up,Right}
-	bspc node -z {left -20 0,bottom 0 20,top 0 -20,right 20 0}
+    bspc node -z {left -20 0,bottom 0 20,top 0 -20,right 20 0}
 
 # contract a window by moving one of its side inward
 mod3 + alt + shift + {Left,Down,Up,Right} 
-	bspc node -z {right -20 0,top 0 20,bottom 0 -20,left 20 0}
+    bspc node -z {right -20 0,top 0 20,bottom 0 -20,left 20 0}
 
 
-#----MISC bindings----#
+#--MISC---------------------------------------------------------------------------
+
+
 mod3 + c
     thunar
 
@@ -100,7 +121,7 @@ mod3 + x
 
 # terminal emulator
 mod3 + Return
-	st
+    st
 
 # program launcher
 mod3 + d
@@ -110,9 +131,13 @@ mod3 + d
 mod3 + p
     $HOME/.config/rofi/applets/applets/powermenu.sh
 
-# flameshot
+# Flameshot (Screenshot utility)
 shift + alt + 2
     flameshot gui
+
+# Flameshot delayed
+shift + control + alt + 2
+    sleep 5 && flameshot gui
 
 # audio
 XF86Audio{Raise,Lower}Volume
@@ -127,4 +152,6 @@ XF86AudioPlay
 shift + XF86Audio{Raise,Lower}Volume
     playerctl {next, previous}
 
-
+# Emoji/Kaomoji popup
+shift + mod3 + e
+    splatmoji type

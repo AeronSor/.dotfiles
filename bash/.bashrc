@@ -17,6 +17,7 @@ alias cw="custom-xsetwacom"
 alias hub="cd /mnt/Hub"
 alias projects="cd /mnt/Hub/Projects"
 alias coding="cd /mnt/Hub/Projects/Coding && ranger"
+alias ranger='ranger --choosedir=$HOME/.rangedir; LASTDIR=`cat $HOME/.rangedir`; cd "$LASTDIR"'
 
 #Sourcing
 source $HOME/Scripts/customFunctions.sh
@@ -29,3 +30,5 @@ export PATH=$PATH:/home/aeron/Scripts/
 export PATH=/home/aeron/.npm-global/bin:$PATH
 export VISUAL=/usr/bin/nvim
 export EDITOR=/usr/bin/nvim
+export CALIBRE_USE_DARK_PALETTE=1
+
